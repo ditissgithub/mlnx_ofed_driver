@@ -30,7 +30,7 @@ kernel-3.10.0-1160.el7.x86_64 \
 kernel-tools-3.10.0-1160.el7.x86_64 \
 libusbx numactl-libs libnl3 gcc-gfortran fuse-libs tcsh createrepo wget python-devel
 
-RUN yum -y install curl && (wget ${D_OFED_URL_PATH} | tar -xzf -)
+RUN yum -y install curl && (curl ${D_OFED_URL_PATH} | tar -xzf -)
 RUN yum -y install autoconf automake binutils ethtool gcc git hostname kmod libmnl libtool lsof make pciutils perl procps python36 python36-devel rpm-build tcl tk wget
 
 WORKDIR /
